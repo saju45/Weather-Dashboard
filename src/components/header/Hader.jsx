@@ -1,5 +1,4 @@
 import Favourite from "./Favourite";
-import FavouriteListModal from "./FavouriteListModal";
 import Logo from "./Logo";
 import Search from "./Search";
 export default function Header() {
@@ -10,7 +9,7 @@ export default function Header() {
         <div className="flex items-center gap-4 relative">
           <Search />
           <Favourite />
-          <FavouriteListModal />
+          {/* <FavouriteListModal /> */}
         </div>
       </nav>
     </header>
