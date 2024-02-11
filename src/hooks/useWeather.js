@@ -76,12 +76,13 @@ const useWeather=()=>{
     useEffect(()=>{
 
         setLoading({
-            loading:true,
+            ...loading,
+            state:true,
             message:"Finding location"
         })
 
-        if(selectedLocation.latitute && selectedLocation.longitute){
-            fetchWeatherData(selectedLocation.latitute,selectedLocation.longitute)
+        if(selectedLocation.latitude && selectedLocation.longitude){
+            fetchWeatherData(selectedLocation.latitude,selectedLocation.longitude)
         }else{
             navigator.geolocation.getCurrentPosition(function (position){
                 fetchWeatherData(position.coords.latitude,position.coords.longitude)
@@ -90,7 +91,7 @@ const useWeather=()=>{
         }
         
 
-    },[selectedLocation.latitute,selectedLocation.longitute]);
+    },[selectedLocation.latitude,selectedLocation.longitude]);
 
 
     return {
