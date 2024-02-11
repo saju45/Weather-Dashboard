@@ -80,8 +80,8 @@ const useWeather=()=>{
             message:"Finding location"
         })
 
-        if(selectedLocation.latitude && selectedLocation.longitude){
-            fetchWeatherData(selectedLocation.latitude,selectedLocation.longitude)
+        if(selectedLocation.latitute && selectedLocation.longitute){
+            fetchWeatherData(selectedLocation.latitute,selectedLocation.longitute)
         }else{
             navigator.geolocation.getCurrentPosition(function (position){
                 fetchWeatherData(position.coords.latitude,position.coords.longitude)
@@ -90,7 +90,7 @@ const useWeather=()=>{
         }
         
 
-    },[selectedLocation.latitude,selectedLocation.longitude]);
+    },[selectedLocation.latitute,selectedLocation.longitute]);
 
 
     return {
