@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FavouriteContext } from "../context";
 import { useLocalStorage } from "../hooks";
 
